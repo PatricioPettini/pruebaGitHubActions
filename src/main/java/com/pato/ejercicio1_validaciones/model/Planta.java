@@ -24,8 +24,6 @@ import java.time.LocalDateTime;
 public class Planta {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Null(groups = OnCreate.class)      // cuando se crea, el id debe ser nulo
-    @NotNull(groups = OnUpdate.class)   // cuando se actualiza, el id debe existir
     private Long id;
 
     @NotBlank(message = "El nombre comun no puede estar vacio")
